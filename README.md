@@ -28,6 +28,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: https://github.com/Arkadiusz-coder/interactive-rating-component
+- Live page URL: https://arkadiusz-coder.github.io/Interactive-rating-component/
 
 ## My process
 
@@ -95,4 +96,4 @@ My recourse was chatGPT 3.5. I've spend houers checking variants of some solutio
 ## Author
 
 - GitHub - https://github.com/Arkadiusz-coder
-- Frontend Mentor - https://www.frontendmentor.io/home
+- Frontend Mentor - https://www.frontendmentor.io/profile/Arkadiusz-coder
