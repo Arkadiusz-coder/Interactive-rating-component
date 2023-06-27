@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+
+  <title>Frontend Mentor | Interactive rating component</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
+  
+</head>
+<body>
+
+  <!-- Rating state start -->
+  <div class="container" id='rating__component'>
+      <img src="images/icon-star.svg" alt="icon-star" class="star-image">
+    <main class="main">
+     
+      <h1>How did we do?</h1>
+      <p>Please let us know how we did with your support request. All feedback is appreciated 
+         to help us improve our offering!</p>
+    </main>
+    <div class="rating-numbers">
+      <div class="number" onclick="selectDiv(this)"><span class="mySpan" onclick="selectNumber(1)">1</span></div>
+      <div class="number" onclick="selectDiv(this)"><span class="mySpan" onclick="selectNumber(2)">2</span></div>
+      <div class="number" onclick="selectDiv(this)"><span class="mySpan" onclick="selectNumber(3)">3</span></div>
+      <div class="number" onclick="selectDiv(this)"><span class="mySpan" onclick="selectNumber(4)">4</span></div>
+      <div class="number" onclick="selectDiv(this)"><span class="mySpan" onclick="selectNumber(5)">5</span></div>
+    </div>
+    
+    <button id="submitButton" onclick="submitSelection()">Submit</button>
+  </div>
+  <!-- Rating state end -->
+
+  <!-- Thank you state start -->
+  <div class="container" id='thanks__component'>
+    <img src="images/illustration-thank-you.svg" alt="illustration-thank-you" class="device-ilustration">
+    
+    <div><p class="result" id="result"></p>    
+    </div>
+      <h1>Thank you!</h1>
+        <p>We appreciate you taking the time to give a rating. If you ever need more support, 
+           don’t hesitate to get in touch!</p>
+  </div>
+  <!-- Thank you state end -->
+
+  
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/Arkadiusz-coder" target="_b
+    ">Arkadiusz Deka</a>.
+  </footer>
+
+
+<script>
+let selectedNumber;
+
+function selectNumber(number) {
+  selectedNumber = number;
+  const numbers = document.querySelectorAll('.number');
+  numbers.forEach((num) => {
+    num.classList.remove('selected');
+  });
+
+  const selectedNum = document.querySelector(`.number:nth-child(${number})`);
+  selectedNum.classList.add('selected');
+}
+
+function submitSelection() {
+  const ratingComponent = document.getElementById('rating__component');
+  const thanksComponent = document.getElementById('thanks__component');
+  const result = document.getElementById('result');
+
+  ratingComponent.style.display = 'none';
+  thanksComponent.style.display = 'block';
+  result.textContent = `You selected ${selectedNumber} out of 5`;
+    }
+
+</script>
+</body>
+</html>

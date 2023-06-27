@@ -1,0 +1,174 @@
+:root
+{
+    --orange: hsl(25, 97%, 53%);
+    --white: hsl(0, 0%, 100%);
+    --light-grey: hsl(217, 12%, 63%);
+    --medium-grey: hsl(216, 12%, 54%);
+    --midium-dark-blue: hsl(211, 22%, 21%);
+    --dark-blue: hsl(213, 19%, 18%);
+    --very-dark-blue: hsl(216, 12%, 8%);
+}
+
+*, ::before, ::after
+{
+    box-sizing: border-box;
+}
+
+body
+{
+    display: flex;
+    justify-content: center;
+    padding: 5rem 2rem;
+
+    font-size: 15px;
+    font-family: 'Overpass', sans-serif;
+    background-color: var(--very-dark-blue);
+}
+
+.container
+{
+    background-color: var(--dark-blue);
+    color: var(--white);
+    border: none;
+    border-radius: 15px;
+    padding: 1.5rem;
+    max-width: 322px;
+}
+
+/* style for rating__component*/
+
+rating__component
+{
+    display: block;
+}
+
+.star-image
+{
+    
+    background-color: var(--midium-dark-blue);
+    border-radius: 50%;
+    padding: .6rem;
+}
+
+h1
+{
+    font-size: 1.2rem;
+}
+
+p
+{
+    color: var(--medium-grey);
+    font-size: .79rem;
+}
+
+.rating-numbers
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+.number
+{
+    color: var(--medium-grey);
+    background-color: var(--midium-dark-blue);
+    transition: background-color 0.3s;
+    font-size: .65rem;
+    font-weight: 700;
+    padding: .75rem;
+    border-radius: 50%; 
+}
+
+.number.selected
+{
+    background-color: var(--light-grey);
+}
+
+.number.selected .mySpan
+{
+    color: var(--white);
+}
+
+.number:hover
+{
+    cursor: pointer;
+    color: var(--white);
+    background-color: var(--orange);
+}
+
+.mySpan
+{
+    color: var(--light-grey);
+    transition: color .3s;
+    text-decoration: none;
+}
+
+.number:hover .mySpan
+{
+   color: var(--white);
+}
+
+#submitButton
+{
+    background-color: var(--orange);
+    transition: background-color .3s;
+    color: var(--white);
+    font-weight: 700;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 100px;
+    padding: .5rem 3rem;
+    margin: 1.5rem auto 0;
+    width: 100%;
+}
+
+#submitButton:hover,
+#submitButton:focus-visible
+{
+    cursor: pointer;
+    color: var(--orange);
+    background-color: var(--white);
+}
+
+/* style for thank-you__component*/
+
+#thanks__component
+{
+    display: none;
+    text-align: center;
+    padding: 1.5rem;
+}
+
+.device-ilustration
+{
+   width: 120px;
+   height: 80px;
+}
+
+.result
+{
+    color: var(--orange);
+    background-color: var(--midium-dark-blue);
+    border-radius: 100px;
+    padding: .4rem;
+    width: 60%;
+    margin: 1rem auto;
+}
+
+/* attribution */
+
+.attribution 
+{ 
+    font-size: .6rem; 
+    text-align: center;
+    text-decoration: none;
+    font-variant: small-caps;
+    position: absolute;
+    bottom: 0;
+    justify-self: center;
+    color: var(--midium-dark-blue);
+}
+    
+.attribution a 
+{
+    color: var(--medium-grey); 
+}
