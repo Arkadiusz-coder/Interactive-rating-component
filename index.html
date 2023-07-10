@@ -17,42 +17,47 @@
 <body>
 
   <!-- Rating state start -->
-  <div class="container" id='rating__component'>
+  <div class="container" id='rating__component' role='main'>
     <picture>
       <img src="./icon-star.svg" alt="icon-star" class="star-image">
     </picture>  
-    <main class="main">
+    <section class="main">
      
       <h1>How did we do?</h1>
       <p>Please let us know how we did with your support request. All feedback is appreciated 
          to help us improve our offering!</p>
-    </main>
-    <select>
+    </section>
+    <form>
+    
     <div class="rating-numbers">
+      <select id='rating-select' name='rating'>
       <option class="number" onclick="selectDiv(this)"><span class="mySpan" onclick="selectNumber(1)">1</span></option>
       <option class="number" onclick="selectDiv(this)"><span class="mySpan" onclick="selectNumber(2)">2</span></option>
       <option class="number" onclick="selectDiv(this)"><span class="mySpan" onclick="selectNumber(3)">3</span></option>
       <option class="number" onclick="selectDiv(this)"><span class="mySpan" onclick="selectNumber(4)">4</span></option>
       <option class="number" onclick="selectDiv(this)"><span class="mySpan" onclick="selectNumber(5)">5</span></option>
-    </div>  
     </select>
-    
-    <button id="submitButton" onclick="submitSelection()">Submit</button>
+    </div>
+      
+    <button type='button' id="submitButton" onclick="submitSelection()">Submit</button>
+    </form>  
   </div>
   <!-- Rating state end -->
 
   <!-- Thank you state start -->
-  <main>
-    <div class="container" id='thanks__component'>
+  <aside>
+    <div class="container" id='thanks__component' role=''main>
     <img src="./illustration-thank-you.svg" alt="illustration-thank-you" class="device-ilustration">
     
     <div><p class="result" id="result"></p>    
     </div>
+   <section>   
       <h1>Thank you!</h1>
         <p>We appreciate you taking the time to give a rating. If you ever need more support, 
            don’t hesitate to get in touch!</p>
-  </div>
-  </main>  
+   </section>
+    </div>
+  </aside>  
   <!-- Thank you state end -->
 
   
